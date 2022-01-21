@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gerencidor de tarefas</title>
+   <link rel="stylesheet" href="styles/estilo.css">
+   <script src="js/fontawesome.min.js"></script>
+</head>
+<body>
+   <div class="container">
+      <form>
+         <header class="header-form">
+            <h1>Gerenciador de tarefas</h1>
+            <div class="box-text">
+               <input type="text" name="txtTarefa" id="idTarefa" autocomplete="off" placeholder="Adiciona uma tarefa">
+               <span class="icon" id="iconAddTask" role="button">
+                  <i class="far fa-plus-square fa-2x" onclick="addTask()"></i>
+               </span>
+            </div>
+         </header>
+         <section class="section-form">
+            <ul id="list-items"></ul>
+         </section>
+      </form>
+   </div>
+   <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@mixin setFlex($type, $alignH, $alignV) {
+    display: flex;
+    flex-direction: $type;
+    justify-content: $alignH;
+    align-items: $alignV;
+}
+
+html {
+    background-color: #080b10;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span.icon {
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.4);
+    }
+}
+ 
+div.container {
+    position: absolute;
+    width: 450px;
+    min-height: 300px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header, li {
+    background-color: #101318;
+}
+
+header.header-form {
+    @include setFlex(column, center, center);
+    box-shadow: .5px .5px 4px rgba(255, 255, 255, 0.329);
+    padding: 20px 0;
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .box-text {
+        background-color: rgba(155, 167, 236, 0.753);
+        @include setFlex(row, space-between, center);
+        width: 80%;
+        height: 30px;
+        padding: 5px;
+        
+
+        input {
+            width: 100%;
+            background-color: transparent;
+            color: white;
+            border: none;
+            outline: none;
+            overflow: hidden;
+        }
+    }
+}
+
+section.section-form {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            border-left: {
+                width: 2px;
+                style: solid;
+                color: #5c50fd80;
+            }
+            border-bottom: 1.2px solid #5c50fd80;
+            margin: 15px 0;
+            @include setFlex(row, space-between, stretch);
+            padding: 10px;
+            
+            span.icons {
+                width: 40px !important;
+                @include setFlex(row, space-between, flex-end);
+            }
+        }
+    }
+}
