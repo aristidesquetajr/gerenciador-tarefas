@@ -6,7 +6,7 @@
 }
 
 html {
-    background-color: #080b10;
+    background-color: rgb(4, 20, 27);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -20,8 +20,7 @@ span.icon {
  
 div.container {
     position: absolute;
-    width: 450px;
-    min-height: 300px;
+    width: 40rem;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -43,10 +42,10 @@ header.header-form {
     .box-text {
         background-color: rgba(155, 167, 236, 0.753);
         @include setFlex(row, space-between, center);
-        width: 80%;
+        width: 75%;
         height: 30px;
-        padding: 5px;
-        
+        padding: 8px 15px 8px 8px;
+        border-radius: 2em;
 
         input {
             width: 100%;
@@ -67,7 +66,7 @@ section.section-form {
 
         li {
             border-left: {
-                width: 2px;
+                width: 5px;
                 style: solid;
                 color: #5c50fd80;
             }

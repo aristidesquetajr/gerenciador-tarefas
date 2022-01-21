@@ -35,12 +35,20 @@ function saveLocalStorage() {
 }
 
 function deleteTask(index) {
-    task.splice(index, 1)
-    saveLocalStorage()
+    let isconfirm = window.confirm(`Deseja apagar a tarefa "${task[index]}"?`)
+    if(isconfirm) {
+        task.splice(index, 1)
+        saveLocalStorage()
+    }
 }
 
 function editTask(index) {
     let newText = window.prompt("Informe o texto")
+    if(newText.length) {
+        task[index] = newText
+        saveLocalStorage()
+    }
+
 }
 
 form.addEventListener('submit', () => {
