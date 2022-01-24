@@ -2,7 +2,7 @@
 
 ## Tecnologias
 
-Este projecto foi desenvolvido com as seguintes tecnologias da web
+Este projecto foi desenvolvido com as seguintes tecnologias
 
 * HTML
 * CSS

@@ -1,5 +1,7 @@
 const strLocalstorage = 'items-gTarefas'
-const task = JSON.parse(localStorage.getItem(strLocalstorage)) || ["Welcome"]
+var task = ["Welcome"]
+if(localStorage.getItem(strLocalstorage) != undefined)
+    task = JSON.parse(localStorage.getItem(strLocalstorage))
 const form = document.querySelector('form')
 const ul = document.getElementById('list-items')
 
@@ -7,23 +9,24 @@ rendererTasks()
 
 function rendererTasks() {
     ul.innerText = ''
-    
-    for(let index = task.length - 1; index >= 0; index--) {
+    task.forEach((element, index) => {
         const li = document.createElement('li')
-
-        let output = `<span>${task[index]}</span>`
-        output += `<span class="icons"> <span class="icon" onclick="editTask(${index})"><i class="far fa-edit"></i></span>`
-        output += `&nbsp; <span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></span>`
-
-        li.innerHTML = output
+        const icons = document.createElement('span')
+        icons.classList.add('icons')
+        
+        li.classList.add(`task-${index}`)
+        li.innerHTML = `<span class="task-text">${element}</span>`
+        icons.appendChild(iconEdit(index))
+        icons.appendChild(iconDelete(index))
+        li.appendChild(icons)
         ul.appendChild(li)
-    }
+    })
 }
 
 function addTask() {
     let text = document.querySelector('#idTarefa')
     if (text.value.length) {
-        task.push(text.value)
+        task.unshift(text.value)
         text.value = ''
         saveLocalStorage()
     } else window.alert("Digite uma tarefa")
@@ -43,12 +46,33 @@ function deleteTask(index) {
 }
 
 function editTask(index) {
+    /* const taskText = document.querySelector(`li.task-${index} span.task-text`)
+    taskText.setAttribute('contenteditable', '') */ // Pensando
     let newText = window.prompt("Informe o texto")
-    if(newText.length) {
+    if(newText != undefined) {
         task[index] = newText
         saveLocalStorage()
     }
+}
 
+function iconEdit(index) {
+    const span = document.createElement('span')
+    const i = document.createElement('i')
+    i.classList.add("far", "fa-edit")
+    i.setAttribute('onclick', `editTask(${index})`)
+    span.appendChild(i)
+    span.classList.add('icon')
+    return span
+}
+
+function iconDelete(index) {
+    const span = document.createElement('span')
+    const i = document.createElement('i')
+    i.classList.add("fas", "fa-trash")
+    i.setAttribute('onclick', `deleteTask(${index})`)
+    span.appendChild(i)
+    span.classList.add('icon')
+    return span
 }
 
 form.addEventListener('submit', () => {
