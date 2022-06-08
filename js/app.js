@@ -1,7 +1,5 @@
 const strLocalstorage = 'items-gTarefas'
-var task = ["Welcome"]
-if(localStorage.getItem(strLocalstorage) != undefined)
-    task = JSON.parse(localStorage.getItem(strLocalstorage))
+const task = JSON.parse(localStorage.getItem(strLocalstorage)) ?? ["Welcome"]
 const form = document.querySelector('form')
 const ul = document.getElementById('list-items')
 

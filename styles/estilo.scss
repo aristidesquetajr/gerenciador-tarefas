@@ -15,6 +15,7 @@ span.icon {
     cursor: pointer;
     &:hover {
         transform: scale(1.4);
+        transition: all .2s ease
     }
 }
  
@@ -27,7 +28,7 @@ div.container {
 }
 
 header, li {
-    background-color: #101318;
+    background-color: #000b1b;
 }
 
 header.header-form {
@@ -71,7 +72,7 @@ section.section-form {
                 color: #5c50fd80;
             }
             border-bottom: 1.2px solid #5c50fd80;
-            margin: 15px 0;
+            margin: 8px 0;
             @include setFlex(row, space-between, stretch);
             padding: 10px;
             
