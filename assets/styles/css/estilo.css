@@ -1,0 +1,83 @@
+html {
+  background-color: rgb(4, 20, 27);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+span.icon {
+  cursor: pointer;
+}
+span.icon:hover {
+  transform: scale(1.4);
+  transition: all 0.2s ease;
+}
+
+div.container {
+  position: absolute;
+  width: 40rem;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header, li {
+  background-color: #000b1b;
+}
+
+header.header-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.5px 0.5px 4px rgba(255, 255, 255, 0.329);
+  padding: 20px 0;
+}
+header.header-form h1 {
+  font-size: 1.5em;
+}
+header.header-form .box-text {
+  background-color: rgba(155, 167, 236, 0.753);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  height: 30px;
+  padding: 8px 15px 8px 8px;
+  border-radius: 2em;
+}
+header.header-form .box-text input {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+section.section-form ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+section.section-form ul li {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: rgba(92, 80, 253, 0.5019607843);
+  border-bottom: 1.2px solid rgba(92, 80, 253, 0.5019607843);
+  margin: 8px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px;
+}
+section.section-form ul li span.icons {
+  width: 40px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/*# sourceMappingURL=estilo.css.map */
