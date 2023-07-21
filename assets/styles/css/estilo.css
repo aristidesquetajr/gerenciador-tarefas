@@ -2,22 +2,28 @@ html {
   background-color: rgb(4, 20, 27);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 span.icon {
   cursor: pointer;
 }
 span.icon:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   transition: all 0.2s ease;
 }
 
 div.container {
   position: absolute;
-  width: 40rem;
-  top: 10%;
+  width: 60rem;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
+  padding-bottom: 3rem;
 }
 
 header, li {
@@ -29,8 +35,9 @@ header.header-form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.5px 0.5px 4px rgba(255, 255, 255, 0.329);
-  padding: 20px 0;
+  padding-block: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1.2rem;
 }
 header.header-form h1 {
   font-size: 1.5em;
@@ -43,8 +50,8 @@ header.header-form .box-text {
   align-items: center;
   width: 75%;
   height: 30px;
-  padding: 8px 15px 8px 8px;
-  border-radius: 2em;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
 }
 header.header-form .box-text input {
   width: 100%;
@@ -54,6 +61,9 @@ header.header-form .box-text input {
   outline: none;
   overflow: hidden;
 }
+header.header-form .box-text input::placeholder {
+  color: #f0f0f0;
+}
 
 section.section-form ul {
   margin: 0;
@@ -61,7 +71,7 @@ section.section-form ul {
   list-style-type: none;
 }
 section.section-form ul li {
-  border-left-width: 5px;
+  border-left-width: 3px;
   border-left-style: solid;
   border-left-color: rgba(92, 80, 253, 0.5019607843);
   border-bottom: 1.2px solid rgba(92, 80, 253, 0.5019607843);
@@ -70,7 +80,7 @@ section.section-form ul li {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  padding: 10px;
+  padding: 1.5rem;
 }
 section.section-form ul li span.icons {
   width: 40px !important;
