@@ -53,6 +53,9 @@ header.header-form .box-text {
   padding: 0.8rem;
   border-radius: 0.8rem;
 }
+header.header-form .box-text:focus-within {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
 header.header-form .box-text input {
   width: 100%;
   background-color: transparent;
