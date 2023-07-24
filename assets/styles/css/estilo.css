@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html {
   background-color: rgb(4, 20, 27);
   color: white;
@@ -41,6 +47,7 @@ header.header-form {
 }
 header.header-form h1 {
   font-size: 1.5em;
+  margin-bottom: 0.8rem;
 }
 header.header-form .box-text {
   background-color: rgba(155, 167, 236, 0.753);
@@ -49,8 +56,8 @@ header.header-form .box-text {
   justify-content: space-between;
   align-items: center;
   width: 75%;
-  height: 30px;
-  padding: 0.8rem;
+  height: 4rem;
+  padding-inline: 0.8rem;
   border-radius: 0.8rem;
 }
 header.header-form .box-text:focus-within {
@@ -58,27 +65,24 @@ header.header-form .box-text:focus-within {
 }
 header.header-form .box-text input {
   width: 100%;
+  height: 100%;
   background-color: transparent;
   color: white;
   border: none;
   outline: none;
   overflow: hidden;
+  font-size: 1.5rem;
 }
 header.header-form .box-text input::placeholder {
-  color: #f0f0f0;
+  color: #d1d1d1;
 }
 
 section.section-form ul {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
 }
 section.section-form ul li {
-  border-left-width: 3px;
-  border-left-style: solid;
-  border-left-color: rgba(92, 80, 253, 0.5019607843);
-  border-bottom: 1.2px solid rgba(92, 80, 253, 0.5019607843);
-  margin: 8px 0;
+  margin-block: 0.8rem;
+  border-radius: 0.8rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
