@@ -24,6 +24,7 @@ body {
 
 span.icon {
     cursor: pointer;
+
     &:hover {
         transform: scale(1.2);
         transition: all .2s ease;
@@ -35,8 +36,8 @@ div.container {
     width: 60rem;
     top: 5%;
     left: 50%;
-    transform: translateX(-50%);
     padding-bottom: 3rem;
+    transform: translateX(-50%);
 }
 
 header, li {
@@ -55,12 +56,12 @@ header.header-form {
     }
 
     .box-text {
-        background-color: rgba(155, 167, 236, 0.753);
-        @include setFlex(row, space-between, center);
         width: 75%;
         height: 4rem;
-        padding-inline: 0.8rem;
+        @include setFlex(row, space-between, center);
+        background-color: rgba(155, 167, 236, 0.753);
         border-radius: 0.8rem;
+        padding-inline: 0.8rem;
 
         &:focus-within {
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
@@ -88,15 +89,10 @@ section.section-form {
         list-style-type: none;
 
         li {
-            margin-block: 0.8rem;
+            @include setFlex(row, space-between, center);
             border-radius: 0.8rem;
-            @include setFlex(row, space-between, stretch);
+            margin-block: 0.8rem;
             padding: 1.5rem;
-            
-            span.icons {
-                width: 40px !important;
-                @include setFlex(row, space-between, flex-end);
-            }
         }
     }
 }

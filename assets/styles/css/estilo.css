@@ -28,8 +28,8 @@ div.container {
   width: 60rem;
   top: 5%;
   left: 50%;
-  transform: translateX(-50%);
   padding-bottom: 3rem;
+  transform: translateX(-50%);
 }
 
 header, li {
@@ -50,15 +50,15 @@ header.header-form h1 {
   margin-bottom: 0.8rem;
 }
 header.header-form .box-text {
-  background-color: rgba(155, 167, 236, 0.753);
+  width: 75%;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 75%;
-  height: 4rem;
-  padding-inline: 0.8rem;
+  background-color: rgba(155, 167, 236, 0.753);
   border-radius: 0.8rem;
+  padding-inline: 0.8rem;
 }
 header.header-form .box-text:focus-within {
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
@@ -81,20 +81,13 @@ section.section-form ul {
   list-style-type: none;
 }
 section.section-form ul li {
-  margin-block: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 0.8rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
+  margin-block: 0.8rem;
   padding: 1.5rem;
-}
-section.section-form ul li span.icons {
-  width: 40px !important;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
 }
 
 /*# sourceMappingURL=estilo.css.map */

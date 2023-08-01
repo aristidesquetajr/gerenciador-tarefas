@@ -1,4 +1,4 @@
-const strLocalstorage = 'items-gTarefas'
+const strLocalstorage = '@tasks-management'
 const tasks = JSON.parse(localStorage.getItem(strLocalstorage)) ?? ["Welcome"]
 const form = document.querySelector('form')
 const ul = document.getElementById('list-items')
@@ -9,15 +9,11 @@ function rendererTasks() {
     ul.innerText = ''
     tasks.forEach((element, index) => {
         const li = document.createElement('li')
-        const icons = document.createElement('span')
-        icons.classList.add('icons')
         
-        li.classList.add(`task-${index}`)
         li.innerHTML = `<span class="task-text" contenteditable onkeypress="editTask(${index})">${element}</span>`
 
-        icons.appendChild(iconDelete(index))
+        li.appendChild(iconDelete(index))
 
-        li.appendChild(icons)
         ul.appendChild(li)
     })
 }
